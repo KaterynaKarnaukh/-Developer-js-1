@@ -123,11 +123,11 @@
 //№6
 //  Використайте цикл while, щоб вивести в console всі числа від 0 до 20 включно.
 
-let i = 0;
-while (i <= 20) {
-    console.log(i);
-    i++;
-}
+// let i = 0;
+// while (i <= 20) {
+//     console.log(i);
+//     i++;
+// }
 
 
 // № 7
@@ -138,14 +138,74 @@ while (i <= 20) {
 // Окрім цього, підрахуйте суму всіх парних чисел в цьому циклі
 // і поверніть її з функції.
 
-function getNumbers(min, max) {
-    let sum = 0;
-    for (let i = max; i >= min; i--) {
-        console.log(i);
-        if (i % 2 === 0) {
-            sum += i;
-        }
+// function getNumbers(min, max) {
+//     let sum = 0;
+//     for (let i = max; i >= min; i--) {
+//         console.log(i);
+//         if (i % 2 === 0) {
+//             sum += i;
+//         }
+//     }
+//     return sum;
+// }
+// console.log("Сума парних чисел:", getNumbers(1, 10));
+
+
+// № 8
+// Напишіть функцію min(a, b), яка приймає 2 числа і повертає меньше з них.
+// Потрібно додати перевірку, що функція отримує саме числа, в іншому випадку
+// повертати з функції рядок - 'Not a number!'.
+
+// function min(a, b) {
+//     if (typeof a !== "number" || typeof b !== "number") {
+//       return 'Not a number!';
+//     }
+//     return a < b ? a : b;
+// }
+// console.log(min(5, 3));    // 3
+// console.log(min(10, 20));  // 10
+// console.log(min("x", 5));  // Not a number!
+
+
+//№ 9
+//  Напишіть функцію isAdult(age), яка  приймає число - вік користувача і повертає true,
+// якщо параметр age більше чи дорівнює 18.
+// В іншому випадку вона запитує підтвердження через confirm
+// і повертає його результат (true/false).
+
+// function isAdult(age) {
+//   if (age >= 18) {
+//     return true;
+//   } else {
+//     return confirm("Ви впевнені?");
+//   }
+// }
+
+// console.log(isAdult(20)); // true
+// console.log(isAdult(15)); // відкриє confirm
+
+
+//№10
+//  Напишіть функцію fizzBuzz(num), яка приймає число і перевіряє кожне число від 1 до num:
+// Якщо число ділитися  без остачі на 3 - виводить в консоль 'fizz',
+// якщо ділиться  без остачі на 5 - виводить в консоль 'buzz',
+// якщо ділиться  без остачі і на 3, і на 5 - виводить в консоль 'fizzbuzz'.
+
+function fizzBuzz(num) {
+  for (let i = 1; i <= num; i++) {
+    
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log("fizzbuzz");
+    } else if (i % 3 === 0) {
+      console.log("fizz");
+    } else if (i % 5 === 0) {
+      console.log("buzz");
+    } else {
+      console.log(i); 
     }
-    return sum;
+
+  }
 }
-console.log("Сума парних чисел:", getNumbers(1, 10));
+
+// приклад:
+fizzBuzz(20);
